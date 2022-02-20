@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-plugin",
+  "name": "gatsby-source-greenhouse-job-board-lite",
   "version": "1.0.0",
-  "description": "A minimal boilerplate for the essential files Gatsby looks for in a plugin",
+  "description": "Pull Job Board Data from Greenhouse",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,8 +9,17 @@
   },
   "keywords": [
     "gatsby",
-    "gatsby-plugin"
+    "gatsby-plugin",
+    "gatsby-source",
+    "gatsby-greenhouse",
+    "greenhouse",
+    "greenhouse job board",
+    "job board"
   ],
-  "author": "Kyle Gill <kyle.robert.gill@gmail.com>",
-  "license": "0BSD"
+  "author": "Weston Hancock <weston.e.hancock@gmail.com>",
+  "license": "0BSD",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "save": "^2.4.0"
+  }
 }
