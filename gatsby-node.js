@@ -50,17 +50,19 @@ async function fetchJobs(boardToken) {
         process.exit(1)
     }
 
-    jobs.forEach(job =>
-        createNode({
-            ...job,
-            id: createNodeId(`job-${job.id}`),
-            parent: null,
-            children: [],
-            internal: {
-                type: 'jobs',
-                content: JSON.stringify(job),
-                contentDigest: createContentDigest(job),
-            },
-        })
-    )
+    if (jobs) {
+        jobs.forEach(job =>
+            createNode({
+                ...job,
+                id: createNodeId(`job-${job.id}`),
+                parent: null,
+                children: [],
+                internal: {
+                    type: 'jobs',
+                    content: JSON.stringify(job),
+                    contentDigest: createContentDigest(job),
+                },
+            })
+        );
+    }
 }
